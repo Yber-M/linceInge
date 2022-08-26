@@ -1,7 +1,7 @@
 package liceninge;
 import java.util.Scanner;
 
-public class main {
+public class ejeCutable {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -14,10 +14,10 @@ public class main {
         int alter;
         
         // Asignandos los datos para el array.
-        ingeNiero n1 = new ingeNiero("Sistemas", 30, "Marlon Yber", "INGENIERO");
-        ingeNiero n2 = new ingeNiero("Sistemas", 31, "Angelo Ernesto", "INGENIERO");
-        ingeNiero n3 = new ingeNiero("Software", 34, "Annie Rose", "INGENIERO");
-        ingeNiero n4 = new ingeNiero("Minas", 35, "Jesús Esquives", "INGENIERO");
+          ingeNiero n1 = new ingeNiero("Sistemas", 30, "Marlon Yber", "INGENIERO");
+          ingeNiero n2 = new ingeNiero("Sistemas", 31, "Angelo Ernesto", "INGENIERO");
+          ingeNiero n3 = new ingeNiero("Software", 34, "Annie Rose", "INGENIERO");
+          ingeNiero n4 = new ingeNiero("Minas", 35, "Jesús Esquives", "INGENIERO");
         otraCarrera n5 = new otraCarrera("LICENCIADO", 21, "Danicsa Rosely", "Enfermeria");
         otraCarrera n6 = new otraCarrera("LICENCIADO", 25, "Nayely Brittany", "Economia");
         otraCarrera n7 = new otraCarrera("LICENCIADO",29, "Rich Lito", "Disenio Grafico");
@@ -28,21 +28,32 @@ public class main {
         
         // Inicio del ciclo repetitivo.
         do {
-        
+            
         // Pedir el usuario que indique el código para buscarlo 
         // en el Array y guardarla en la variable 'code'.
         System.out.print("Indique el codigo : ");
-        code = sc.nextInt();    
+        code = sc.nextInt();  
+        System.out.println("");
         
-        // Recorrer el array
+        //Variable Booleana para verificar si hay datos o no.
+        boolean verifi = true;
+        
+        // For para recorrer el array.
         for (perSona i: arrayPersona) {
-            
             // Condicional para que verifique el código y mostrar en consola.
             if(i.codigo == code) {
-                
-                // Función mostrar de la clase padre
+                // Función mostrar de la clase padre.
                 System.out.println(i.mostrar());
+                verifi = true;
+            } else {
+                verifi = false;
             }
+        }
+            
+        if (verifi != true) {
+            System.out.println(">> ¡ERROR! NO SE ENCONTRARON DATOS CON EL CODIGO MENCIONADO <<\n");
+        } else if (verifi = true) {
+            System.out.println(">> DATOS MOSTRADOS ¡CORRECTAMENTE! <<\n");
         }
          
         // Preguntar al usuario si quiere hacer otra consulta
@@ -53,6 +64,7 @@ public class main {
         // Comprobar el proceso repetivo.
         } while (alter == 1);
         
+        System.out.println("GRACIAS");
     }
     
 }

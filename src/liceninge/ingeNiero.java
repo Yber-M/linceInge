@@ -2,7 +2,7 @@ package liceninge;
 
 // Se coloca el extends para que herede 
 // los atributos de la clase padre.
-public class ingeNiero extends perSona{
+public class ingeNiero extends perSona {
     
     // Variable o atributos de la clase hija.
     String ingDe;

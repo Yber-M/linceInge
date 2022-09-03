@@ -51,9 +51,9 @@ public class ejeCutable {
         }
             
         if (verifi != true) {
-            System.out.println(">> ¡ERROR! NO SE ENCONTRARON DATOS CON EL CODIGO MENCIONADO <<\n");
+            System.out.println(">> ERROR! NO SE ENCONTRARON DATOS CON EL CODIGO MENCIONADO <<\n");
         } else if (verifi = true) {
-            System.out.println(">> DATOS MOSTRADOS ¡CORRECTAMENTE! <<\n");
+            System.out.println(">> DATOS MOSTRADOS CORRECTAMENTE! <<\n");
         }
          
         // Preguntar al usuario si quiere hacer otra consulta
